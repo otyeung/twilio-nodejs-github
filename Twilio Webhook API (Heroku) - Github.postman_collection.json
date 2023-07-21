@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "f4a7627d-8bf4-4898-bdf4-474289aacc8e",
+		"name": "Twilio Webhook API (Heroku) - Github",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18135869",
+		"_collection_link": "https://crimson-resonance-865199.postman.co/workspace/LMS-Nov-2022~f78f8ca6-88a1-45d8-bf17-fb7287fa4d1f/collection/18135869-f4a7627d-8bf4-4898-bdf4-474289aacc8e?action=share&creator=18135869&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "send SMS message (localhost)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "+65xxxxxxxx",
+							"description": "customer mobile number",
+							"type": "text"
+						},
+						{
+							"key": "callerId",
+							"value": "+1xxxxxxxxxx",
+							"description": "Twilio number e.g. +1xxxxxxxxxx",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send SMS message (Heroku)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "+65xxxxxxxx",
+							"description": "customer mobile number",
+							"type": "text"
+						},
+						{
+							"key": "callerId",
+							"value": "+1xxxxxxxxxx",
+							"description": "Twilio number e.g. +1xxxxxxxxxx",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://<app_name>.herokuapp.com/message",
+					"protocol": "http",
+					"host": [
+						"<app_name>",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send Whatsapp message (localhost)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "+65xxxxxxxx",
+							"description": "Customer phone number",
+							"type": "text"
+						},
+						{
+							"key": "callerId",
+							"value": "+1xxxxxxxxxx",
+							"description": "phone number provided by Twilio",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Hello! Thank you for your interest. Our sales rep will contact with you shortly! ",
+							"description": "Whatsapp message",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/send-whatsapp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"send-whatsapp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send Whatsapp message (Heroku)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "+65xxxxxxxx",
+							"description": "Customer phone number",
+							"type": "text"
+						},
+						{
+							"key": "callerId",
+							"value": "+1xxxxxxxxxx",
+							"description": "phone number provided by Twilio",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Hello! Thank you for your interest. Our sales rep will contact with you shortly! ",
+							"description": "Whatsapp message",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://<app-name>.herokuapp.com/send-whatsapp",
+					"protocol": "http",
+					"host": [
+						"<app-name>",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"send-whatsapp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request a call (localhost)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "callerId",
+							"value": "+852xxxxxxxx",
+							"description": "Twilio verified phone number",
+							"type": "text"
+						},
+						{
+							"key": "customerPhone",
+							"value": "+65xxxxxxxx",
+							"description": "customer phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "salesRepPhone",
+							"value": "+65xxxxxxxx",
+							"description": "sales rep phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "John",
+							"description": "customer first name",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Doe",
+							"description": "customer last name",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "ACME Limited",
+							"description": "customer's company name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/call",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"call"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request a call (Heroku)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "callerId",
+							"value": "+852xxxxxxxx",
+							"description": "Twilio verified phone number",
+							"type": "text"
+						},
+						{
+							"key": "customerPhone",
+							"value": "+65xxxxxxxx",
+							"description": "customer phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "salesRepPhone",
+							"value": "+65xxxxxxxx",
+							"description": "sales rep phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "John",
+							"description": "customer first name",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Doe",
+							"description": "customer last name",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "ACME Limited",
+							"description": "customer's company name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://<app-name>.herokuapp.com/call",
+					"protocol": "http",
+					"host": [
+						"<app-name>",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"call"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request a call v2 (localhost)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "callerId",
+							"value": "+852xxxxxxxx",
+							"description": "customer phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "customerPhone",
+							"value": "+65xxxxxxxx",
+							"description": "customer phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "salesRepPhone",
+							"value": "+65xxxxxxxx",
+							"description": "sales rep phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "ACME Limited",
+							"description": "customer's company name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/call2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"call2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request a call v2 (Heroku)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "callerId",
+							"value": "+852xxxxxxxx",
+							"description": "customer phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "customerPhone",
+							"value": "+65xxxxxxxx",
+							"description": "customer phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "salesRepPhone",
+							"value": "+65xxxxxxxx",
+							"description": "sales rep phone number e.g. +65xxxxxxxx",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "ACME Limited",
+							"description": "customer's company name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://<app-name>.herokuapp.com/call2",
+					"protocol": "http",
+					"host": [
+						"<app-name>",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"call2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
